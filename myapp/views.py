@@ -13,12 +13,12 @@ def about(request):
 
 def form(request):
     if request.method == "POST":
-        # Accept Data
+        # Accept Data From model.py file 
         name = request.POST["name"]
         age = request.POST["age"]
         print(name , age)
 
-        # Record Data
+        # Record Data From POST request
         person = Person.objects.create(
             name = name,
             age = age    
